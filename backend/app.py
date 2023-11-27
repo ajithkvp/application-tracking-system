@@ -141,6 +141,37 @@ def create_app():
     def health_check():
         return jsonify({"message": "Server up and running"}), 200
 
+    @app.route("/users/profile", methods=["GET"])
+    def get_profile():
+        try:
+            userid = get_userid_from_header()
+            user = Users.objects.get(id=userid)
+            user_details = user.to_json()
+            return jsonify(user_details)
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+    @app.route("/users/profile", methods=["POST"])
+    def update_profile():
+        try:
+            data = json.loads(request.data)
+            user_id = data.get("id")
+            user = Users.objects.get(id=user_id)
+
+            # Update user profile fields
+            user.education = data["profileDetails"].get("education", [])
+            user.work_experience = data["profileDetails"].get("workExperience", [])
+            user.achievements = data["profileDetails"].get("achievements", "")
+            user.skills = data["profileDetails"].get("skills", "")
+            user.target_details = data.get("targetDetails", {})
+
+            user.save()
+
+            return jsonify({"message": "Profile updated successfully"})
+        except Exception as e:
+            return jsonify({"error": str(e)})
+
+
     @app.route("/users/signup", methods=["POST"])
     def sign_up():
         """
