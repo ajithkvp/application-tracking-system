@@ -171,6 +171,44 @@ def create_app():
         except Exception as e:
             return jsonify({"error": str(e)})
 
+    @app.route("/statistics", methods=["GET"])
+    def get_application_statistics():
+        """
+        Gets statistics about user's applications from the database
+
+        :return: JSON object with application statistics
+        """
+        try:
+            userid = get_userid_from_header()
+            # userid = 1
+            user = Users.objects(id=userid).first()
+            print(user["work_experience"])
+            total_applications = len(user["applications"])
+            
+            # Calculate the number of applications in each status category
+            status_counts = {"1": 0, "2": 0, "3": 0, "4": 0}  # Assuming status values are 1, 2, 3, and 4
+            for application in user["applications"]:
+                status = application.get("status", "1")
+                if status in status_counts:
+                    status_counts[status] += 1
+
+            # You can add more statistics based on your requirements
+
+            statistics = {
+                "total_applications": total_applications,
+                "status_counts": status_counts,
+                "weekly_target": user["target_details"].get("weeklyTarget") if user["target_details"].get("weeklyTarget") else 0,
+                "weekly_applied": status_counts["2"]+status_counts["3"],
+                "target_title": user["target_details"].get("targetTitle"),
+                "target_date": user["target_details"].get("targetDate"),
+                "target_salary": user["target_details"].get("targetSalaryRange")
+            }
+
+            return jsonify(statistics), 200
+
+        except Exception as e:
+            print(str(e))
+            return jsonify({"error": "Internal server error"}), 500
 
     @app.route("/users/signup", methods=["POST"])
     def sign_up():
