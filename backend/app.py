@@ -140,7 +140,7 @@ def create_app():
     @cross_origin()
     def health_check():
         return jsonify({"message": "Server up and running"}), 200
-
+    
     @app.route("/users/signup", methods=["POST"])
     def sign_up():
         """
@@ -182,6 +182,44 @@ def create_app():
         except:
             return jsonify({"error": "Internal server error"}), 500
 
+    @app.route("/statistics", methods=["GET"])
+    def get_application_statistics():
+        """
+        Gets statistics about user's applications from the database
+
+        :return: JSON object with application statistics
+        """
+        try:
+            userid = get_userid_from_header()
+            # userid = 1
+            user = Users.objects(id=userid).first()
+            print(user)
+            total_applications = len(user["applications"])
+            
+            # Calculate the number of applications in each status category
+            status_counts = {"1": 0, "2": 0, "3": 0, "4": 0}  # Assuming status values are 1, 2, 3, and 4
+            for application in user["applications"]:
+                status = application.get("status", "1")
+                if status in status_counts:
+                    status_counts[status] += 1
+
+            # You can add more statistics based on your requirements
+
+            statistics = {
+                "total_applications": total_applications,
+                "status_counts": status_counts,
+                "weekly_target": 10,
+                "weekly_applied": 8,
+                "target_title": "Software Engineer",
+                "target_date":"September 2024",
+                "target_salary": "120000k"
+                # Add more statistics as needed
+            }
+
+            return jsonify(statistics), 200
+
+        except:
+            return jsonify({"error": "Internal server error"}), 500
     @app.route("/users/login", methods=["POST"])
     def login():
         """
@@ -477,6 +515,7 @@ def create_app():
         """
         try:
             userid = get_userid_from_header()
+            print(userid)
             try:
                 user = Users.objects(id=userid).first()
                 if len(user.resume.read()) == 0:
@@ -508,7 +547,8 @@ with open("application.yml") as f:
     password = info["password"]
     app.config["MONGODB_SETTINGS"] = {
         "db": "appTracker",
-        "host": os.getenv("db_username"),
+        # "host": os.getenv("db_username"),
+        "host": "localhost",
     }
 db = MongoEngine()
 db.init_app(app)
@@ -724,6 +764,10 @@ def form_builder():
     except Exception as e:
         print(f"Error processing form data: {str(e)}")
         return "Error processing form data", 500
+
+
+
+
 
 
 if __name__ == '__main__':
