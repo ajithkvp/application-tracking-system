@@ -8,6 +8,7 @@ import SearchPage from './search/SearchPage'
 import LoginPage from './login/LoginPage'
 import ManageResumePage from './resume/ManageResumePage'
 import BuildResumePage from './resume/BuildResumePage'
+import Summary from './application/summary/Summary';
 
 export default class App extends React.Component {
   constructor(props){
@@ -17,7 +18,8 @@ export default class App extends React.Component {
       'ApplicationPage' : <ApplicationPage/>,
       'LoginPage': <LoginPage/>,
       'ManageResumePage': <ManageResumePage/>,
-      'BuildResumePage': <BuildResumePage/>
+      'BuildResumePage': <BuildResumePage/>,
+      'SummaryPage': <Summary/>
 
     }
     this.state ={
