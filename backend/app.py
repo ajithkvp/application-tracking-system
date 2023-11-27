@@ -509,10 +509,10 @@ with open("application.yml") as f:
     app.config["MONGODB_SETTINGS"] = {
         "db": "appTracker",
         "host": os.getenv("db_username"),
+        #"host": "localhost",
     }
 db = MongoEngine()
 db.init_app(app)
-
 
 class Users(db.Document):
     """
@@ -522,11 +522,16 @@ class Users(db.Document):
     id = db.IntField(primary_key=True)
     fullName = db.StringField()
     username = db.StringField()
-    email    = db.StringField()
+    email = db.StringField()
     password = db.StringField()
     authTokens = db.ListField()
     applications = db.ListField()
     resume = db.FileField()
+    education = db.ListField()
+    work_experience = db.ListField()
+    achievements = db.StringField()
+    skills = db.StringField()
+    target_details = db.DictField()
 
     def to_json(self):
         """
@@ -534,8 +539,17 @@ class Users(db.Document):
 
         :return: JSON object
         """
-        return {"id": self.id, "fullName": self.fullName, "username": self.username, "email": self.email}
-
+        return {
+            "id": self.id,
+            "fullName": self.fullName,
+            "username": self.username,
+            "email": self.email,
+            "education": self.education,
+            "work_experience": self.work_experience,
+            "achievements": self.achievements,
+            "skills": self.skills,
+            "target_details": self.target_details
+        }
 
 def get_new_user_id():
     """
