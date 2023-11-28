@@ -119,6 +119,28 @@ Key Features:
 - **Easy Data Input**: Swiftly input essential details such as your personal information, company name, work experience, and more.
 - **Personalization**: Customize your resume according to your specific preferences.
 - **Efficient Time Management**: Streamline the formatting and editing process through automation, saving you valuable time.
+
+### A fresh and new tab to set and meet your targets!:
+### 1. Application Pipeline Management
+
+Easily organize your job search with a visual pipeline that includes key stages such as Wishlist, Referral, Applied, and Rejected. Track the progress of each application and gain valuable insights into your overall job search status.
+
+### 2. Weekly Target Setting
+
+Set achievable weekly goals for job applications to stay on track with your job search. The application helps you define and meet your weekly targets, ensuring a consistent and proactive approach to securing your next role.
+
+### 3. Target Title and Salary Range Setting
+
+Define your career goals clearly by specifying your target job title and desired salary range. The application keeps this information at the forefront, helping you tailor your job search and stay focused on roles that align with your aspirations.
+
+### 4. Application Submission Analytics
+
+Gain insights into your application history with analytics that highlight the percentage of applications submitted versus your target. Visualize your progress over time and make data-driven decisions to improve your application strategy.
+
+### 5. Deadline Tracking
+
+Set target dates for achieving specific career milestones, such as landing a new job by a certain date. The application provides reminders and notifications to keep you on schedule and motivated to meet your goals.
+
   
 ### What's your cup of tea? - check here at Job Preference quiz
 
