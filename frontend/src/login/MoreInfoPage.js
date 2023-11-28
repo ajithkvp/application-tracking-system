@@ -106,7 +106,7 @@ export default class MoreInfoPage extends Component {
                 </div>
                 <div style={{ marginTop: "2rem", marginleft: "1rem", marginRight: "1rem", alignItems: 'center' }}>
                     <button type="button" onClick={this.handleSubmit}>
-                        Review your details
+                        Let's Login!
                     </button>
                 </div>
             </div>
