@@ -8,10 +8,14 @@ import SearchPage from './search/SearchPage'
 import LoginPage from './login/LoginPage'
 import ManageResumePage from './resume/ManageResumePage'
 import BuildResumePage from './resume/BuildResumePage'
+<<<<<<< HEAD
 import CreateUserProfilePage from './login/CreateProfilePage';
 import UserProfilePage from './sidebar/UserProfilePage';
 import MoreInfoPage from './login/MoreInfoPage';
 import QuizPage from './login/quiz';
+=======
+import Summary from './application/summary/Summary';
+>>>>>>> remotes/origin/aivaya-feature
 
 export default class App extends React.Component {
   constructor(props){
@@ -22,10 +26,15 @@ export default class App extends React.Component {
       'LoginPage': <LoginPage/>,
       'ManageResumePage': <ManageResumePage/>,
       'BuildResumePage': <BuildResumePage/>,
+<<<<<<< HEAD
       'UserProfileCreatePage': <CreateUserProfilePage/>,
       'UserProfilePage': <UserProfilePage/>,
       'MoreInfoPage': <MoreInfoPage/>,
       'QuizPage': <QuizPage/>
+=======
+      'SummaryPage': <Summary/>
+
+>>>>>>> remotes/origin/aivaya-feature
     }
     this.state ={
       currentPage: <CreateUserProfilePage/>,
