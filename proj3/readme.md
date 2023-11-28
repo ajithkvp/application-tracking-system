@@ -1,3 +1,7 @@
+## ScoreCard - Markdown file for proj3  
+### please click below for spreadsheet link of scorecard 
+https://docs.google.com/spreadsheets/d/1N73mjdmcH7r2QEr4hIOPnVp8lbqBb6nZylECoW9Pq6g/edit?usp=sharing
+
 | Item                                                                                                                                                                                                         | Assessment | Evidence                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Video                                                                                                                                                                                                        | 3          | https://youtu.be/pZQTCUNq9OU                                                                                                                                                                                   |
