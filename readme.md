@@ -5,7 +5,11 @@
 
 ##     For the Score card of proj3 - click the link below
 
+### Spreadsheet link of scorecard -
 https://docs.google.com/spreadsheets/d/1N73mjdmcH7r2QEr4hIOPnVp8lbqBb6nZylECoW9Pq6g/edit?usp=sharing
+
+### Markdown on readme.md link for the scorecard -
+https://github.com/ajithkvp/application-tracking-system/blob/main/proj3/readme.md
 
 ##     For the video of proj3 - click the link below
 
