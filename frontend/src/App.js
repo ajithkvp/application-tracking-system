@@ -12,6 +12,7 @@ import CreateUserProfilePage from './login/CreateProfilePage';
 import UserProfilePage from './sidebar/UserProfilePage';
 import MoreInfoPage from './login/MoreInfoPage';
 import QuizPage from './login/quiz';
+import Summary from './application/summary/Summary';
 
 export default class App extends React.Component {
   constructor(props){
@@ -25,7 +26,9 @@ export default class App extends React.Component {
       'UserProfileCreatePage': <CreateUserProfilePage/>,
       'UserProfilePage': <UserProfilePage/>,
       'MoreInfoPage': <MoreInfoPage/>,
-      'QuizPage': <QuizPage/>
+      'QuizPage': <QuizPage/>,
+      'SummaryPage': <Summary/>
+
     }
     this.state ={
       currentPage: <CreateUserProfilePage/>,
@@ -91,7 +94,7 @@ export default class App extends React.Component {
     })
   }
 
-  switchtoProfilePage=(targetJSON)=>{
+  switchtoProfilePage= async (targetJSON)=>{
     let newJson = this.state.finalProfile
     newJson["targetDetails"] = targetJSON
     this.setState({
@@ -100,6 +103,28 @@ export default class App extends React.Component {
       finalProfile: newJson
   })
   console.log(JSON.stringify(newJson))
+  
+  try {
+    const response = await fetch('http://localhost:5000/resumebuilder', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
+        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        'Access-Control-Allow-Credentials': 'true',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newJson),
+    });
+
+    if (response.ok && response.headers.get('Content-Type') === 'application/msword') {
+     console.log("success")
+
+    } else {
+      console.error('Failed to submit form:', response.status, response.statusText);
+    }
+  } catch (error) {
+    console.error('Error submitting form:', error.message);
+  }
   }
 
   switchtoLogin=()=>{
