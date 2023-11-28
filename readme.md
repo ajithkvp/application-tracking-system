@@ -371,19 +371,18 @@ Please see our CONTRIBUTING.md for instructions on how to contribute to the repo
 
 ## Have Questions or Need Assistance?
 
-If you have any questions, need help, or want to provide feedback about the J-Tracker 2.0, feel free to contact us at aditya.a.chitlangia@gmail.com. We're here to assist you and make your resume creation experience as smooth as possible.
+If you have any questions, need help, or want to provide feedback about the J-Tracker 2.0, feel free to contact us at rrajash@ncsu.edu. We're here to assist you and make your resume creation experience as smooth as possible.
 
 Your inquiries and suggestions are always welcome!
 
 ## Team Members
-- Ajith Kumar V P
 - Priya Krishnamurthy
 - Divya Puranam
 - Reshma Rajashekaraiah
+- Ajith Kumar V P
 
 ## Recommended Citation
 J-Tracker 2.0 Ajith Kumar V P, Priya Krishnamurthy, Divya Puranam, Reshma Rajashekaraiah, 2023.
-[https://github.com/sachindoddaguni/application-tracking-system]
+https://github.com/ajithkvp/application-tracking-system/tree/main
 
-https://github.com/ajithkvp/application-tracking-system
 
