@@ -143,15 +143,15 @@ Gain insights into your application history with analytics that highlight the pe
 Set target dates for achieving specific career milestones, such as landing a new job by a certain date. The application provides reminders and notifications to keep you on schedule and motivated to meet your goals.
 
   
-### What's your cup of tea? - check here at Job Preference quiz
+### 6. What's your cup of tea? - check here at Job Preference quiz
 
 The job preference quiz is a user-friendly questionnaire that helps individuals specify their career preferences by addressing key factors such as desired job level, area of interest, and preferred locations. This will helpp generate better job recommednadations.
 
-### Profile details of Candidate
+### 7. Profile details of Candidate
 
 The platform now saves the candidate's profile information, including education, work experience, skills, and achievements. This feature enables users to avoid the repetitive task of reentering the same details repeatedly.
 
-### Improved Website Design
+### 8. Improved Website Design
 
 We have enhanced the visual appeal of the website pages by applying CSS, resulting in an improved aesthetic.
 
