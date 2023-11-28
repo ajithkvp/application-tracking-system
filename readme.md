@@ -5,6 +5,12 @@ https://docs.google.com/spreadsheets/d/1N73mjdmcH7r2QEr4hIOPnVp8lbqBb6nZylECoW9P
 
 ##     For the video of proj3 - click the link below
 
+https://youtu.be/pZQTCUNq9OU
+
+
+[![Alt text](https://img.youtube.com/vi/pZQTCUNq9OU/0.jpg)](https://www.youtube.com/watch?v=pZQTCUNq9OU)
+
+
 _________________________________________________________________________________________
 
 
@@ -19,8 +25,6 @@ ________________________________________________________________________________
 
 
 #      J-Tracker 2.0 (Modified) - Your Job Tracking Assistant
-
-https://github.com/sachindoddaguni/application-tracking-system/assets/28365724/05c9b3a1-2487-4249-b160-7eeb24a1ec81
 
 The process of applying for jobs and internships is not a cakewalk. Managing job applications is a time-consuming process. Due to the referrals and deadlines, the entire procedure can be stressful. Our application allows you to track and manage your job application process, as well as regulate it, without the use of cumbersome Excel spreadsheets.
 
@@ -66,16 +70,16 @@ Our application keeps track of the jobs you've added to your wish list. It also 
 
 ### Improvements done for Proj3 are as shown below - 
 
-### Login Page / Signup Page
+### Login Page / Signup Page - with extra styling
 
-The introductory visual interface displayed from which a user is able to register and log into the application.
+Styling of the login interface to be displayed from which a user is able to register and log into the application.
 
 <p align="center"><img width="700" src="./resources/updated_images/WhatsApp Image 2023-11-27 at 10.10.11 PM.jpeg"></p>
 
 
 ### HomeScreen
 
-The introductory visual interface displayed from which a user is able to access different cards - Waitlisted applications, Waiting for Refereals, Applied Jobs, Application Status.The user can also add cards through this screen.
+Home screen (enhanced styling) from which a user is able to access different cards - Waitlisted applications, Waiting for Refereals, Applied Jobs, Application Status.The user can also add cards through this screen.
 
 <p align="center"><img width="700" src="./resources/updated_images/appPage.jpeg"></p>
 
@@ -87,9 +91,6 @@ The introductory visual interface displayed from which a user is able to access 
 3. Click on download button to Download the uploaded file.
 
 <p align="center"><img width="700" src="./resources/updated_images/ResumeBuilder.png"></p>
-
-
-## Improvements for proj3:
 
 ### Personalized CV in seconds - check the Cover Letter Generator!
 
@@ -134,6 +135,8 @@ The job preference quiz is a user-friendly questionnaire that helps individuals 
 ### 7. Profile details of Candidate
 
 The platform now saves the candidate's profile information, including education, work experience, skills, and achievements. This feature enables users to avoid the repetitive task of reentering the same details repeatedly.
+
+
 
 ### 8. Improved Website Design
 
