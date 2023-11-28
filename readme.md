@@ -1,3 +1,11 @@
+#      J-Tracker 2.0 - Modified version for Proj3
+##     For the Score card of proj3 - click the link below
+
+https://docs.google.com/spreadsheets/d/1N73mjdmcH7r2QEr4hIOPnVp8lbqBb6nZylECoW9Pq6g/edit?usp=sharing
+
+##     For the video of proj3 - click the link below
+
+____________________________________________________________________________________________________________________________________________
 https://user-images.githubusercontent.com/89501363/144725439-5d9191f8-df13-4814-aa15-99cd752ab0cc.mp4
 
 [![GitHub license](https://img.shields.io/github/license/kingan1/application-tracking-system)](https://github.com/kingan1/application-tracking-system/blob/main/LICENSE)
@@ -99,6 +107,33 @@ The interface through which a user is able to search for specific jobs based on 
 3. Click on download button to Download the uploaded file.
 
 <p align="center"><img width="700" src="./resources/resume.png"></p>
+
+
+## Improvements for proj3:
+
+### Personalized CV in seconds - check the Cover Letter Generator!
+
+Users now have the ability to effortlessly craft a striking and polished cover letter. The Automatic Cover Letter Generator streamlines the process through an intuitive form for inputting essential information. The cover letter is produced as a Word document that can be edited, providing complete customization to align with your preferences and personal style.
+
+Key Features:
+- **Easy Data Input**: Swiftly input essential details such as your personal information, company name, work experience, and more.
+- **Personalization**: Customize your resume according to your specific preferences.
+- **Efficient Time Management**: Streamline the formatting and editing process through automation, saving you valuable time.
+  
+### What's your cup of tea? - check here at Job Preference quiz
+
+### Profile details of Candidate
+
+### Apply before deadline - be notified!
+
+We are excited to introduce a game-changing enhancement to J-Tracker 2.0 - the Email Notification feature! Keeping track of upcoming job application deadlines is now more effortless than ever.
+
+#### How It Works 
+- J-Tracker 2.0 will notify you through an email whenever a new application is created, updated and deleted.
+- Set your job application deadlines within the application.
+- J-Tracker 2.0 will automatically send you email notifications as your application deadlines approach.
+- Stay organized and never miss an important application deadline again.
+
 
 ## Improvements
 
@@ -357,12 +392,14 @@ If you have any questions, need help, or want to provide feedback about the J-Tr
 Your inquiries and suggestions are always welcome!
 
 ## Team Members
-- Amogh Mahesh
-- Aditya Chitlangia
-- Abhishek Arun Sheth
-- Sachin Rudrappa Doddaguni
+- Ajith Kumar V P
+- Priya Krishnamurthy
+- Divya Puranam
+- Reshma Rajashekaraiah
 
 ## Recommended Citation
-J-Tracker 2.0 Amogh Mahesh, Aditya Chitlangia, Abhishek Arun Sheth, Sachin Rudrappa Doddaguni. 2023.
+J-Tracker 2.0 Ajith Kumar V P, Priya Krishnamurthy, Divya Puranam, Reshma Rajashekaraiah, 2023.
 [https://github.com/sachindoddaguni/application-tracking-system]
+
+https://github.com/ajithkvp/application-tracking-system
 
