@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 class UserProfilePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      education: [
-        { collegeName: 'Example College 1', degree: 'Bachelor', major: 'Computer Science', gpa: '3.8' },
-        { collegeName: 'Example College 2', degree: 'Master', major: 'Data Science', gpa: '4.0' },
-      ],
-      workExperience: [
-        'Software Developer at ABC Company',
-        'Intern at XYZ Corporation',
-      ],
+      education: [],
+      workExperience: [],
       skills: 'React, JavaScript, HTML, CSS',
       achievements: 'Completed a major project on XYZ',
     };
   }
 
-  renderEducation() {
+  /*setter = () => {
+    this.setState({
+      education: this.props.profileJson.profileDetails.education,
+      workExperience: this.props.profileJson.profileDetails.workExperience,
+      skills: this.props.profileJson.profileDetails.skills,
+      education: this.props.profileJson.profileDetails.education
+    })
+  }*/
+
+  renderEducation = async() => {
     return this.state.education.map((edu, index) => (
       <div key={index}>
-        <h3>Education {index + 1}</h3>
+        <h4>Education {index + 1}</h4>
         <p>College Name: {edu.collegeName}</p>
         <p>Degree: {edu.degree}</p>
         <p>Major: {edu.major}</p>
@@ -32,8 +36,9 @@ class UserProfilePage extends Component {
   renderWorkExperience() {
     return this.state.workExperience.map((experience, index) => (
       <div key={index}>
-        <h3>Work Experience {index + 1}</h3>
-        <p>{experience}</p>
+        <h4>Work Experience {index + 1}</h4>
+        <p>Company Name: {experience.collegeName}</p>
+        <p>Degree: {experience.degree}</p>
       </div>
     ));
   }
@@ -42,28 +47,29 @@ class UserProfilePage extends Component {
     this.props.side()
 }
 
-  render() {
+  render () {
+
     return (
       <div>
         <h1>User Profile</h1>
 
         <div>
-          <h2>Education</h2>
+          <h3>Education</h3>
           {this.renderEducation()}
         </div>
 
         <div>
-          <h2>Work Experience</h2>
+          <h3>Work Experience</h3>
           {this.renderWorkExperience()}
         </div>
 
         <div>
-          <h2>Skills</h2>
+          <h3>Skills</h3>
           <p>{this.state.skills}</p>
         </div>
 
         <div>
-          <h2>Achievements</h2>
+          <h3>Achievements</h3>
           <p>{this.state.achievements}</p>
         </div>
         <div style={{ marginTop: "2rem", marginleft: "1rem", marginRight: "1rem", alignItems: 'center'}}>

@@ -141,6 +141,77 @@ def create_app():
     def health_check():
         return jsonify({"message": "Server up and running"}), 200
 
+    @app.route("/users/profile", methods=["GET"])
+    def get_profile():
+        try:
+            userid = get_userid_from_header()
+            user = Users.objects.get(id=userid)
+            user_details = user.to_json()
+            return jsonify(user_details)
+        except Exception as e:
+            print(str(e))
+            return jsonify({"error": str(e)}), 500
+
+    @app.route("/users/profile", methods=["POST"])
+    def update_profile():
+        try:
+            data = json.loads(request.data)
+            user_id  = get_userid_from_header()
+            user = Users.objects.get(id=user_id)
+
+            # Update user profile fields
+            user.education = data["profileDetails"].get("education", [])
+            user.work_experience = data["profileDetails"].get("workExperience", [])
+            user.achievements = data["profileDetails"].get("achievements", "")
+            user.skills = data["profileDetails"].get("skills", "")
+            user.target_details = data.get("targetDetails", {})
+            print(data.get("targetDetails", {}))
+            user.save()
+
+            return jsonify({"message": "Profile updated successfully"})
+        except Exception as e:
+            print(str(e))
+            return jsonify({"error": str(e)})
+
+    @app.route("/statistics", methods=["GET"])
+    def get_application_statistics():
+        """
+        Gets statistics about user's applications from the database
+
+        :return: JSON object with application statistics
+        """
+        try:
+            userid = get_userid_from_header()
+            # userid = 1
+            user = Users.objects(id=userid).first()
+            print(user["work_experience"])
+            total_applications = len(user["applications"])
+            
+            # Calculate the number of applications in each status category
+            status_counts = {"1": 0, "2": 0, "3": 0, "4": 0}  # Assuming status values are 1, 2, 3, and 4
+            for application in user["applications"]:
+                status = application.get("status", "1")
+                if status in status_counts:
+                    status_counts[status] += 1
+
+            # You can add more statistics based on your requirements
+
+            statistics = {
+                "total_applications": total_applications,
+                "status_counts": status_counts,
+                "weekly_target": user["target_details"].get("weeklyTarget") if user["target_details"].get("weeklyTarget") else 0,
+                "weekly_applied": status_counts["3"]+status_counts["4"],
+                "target_title": user["target_details"].get("targetTitle"),
+                "target_date": user["target_details"].get("targetDate"),
+                "target_salary": user["target_details"].get("targetSalaryRange")
+            }
+
+            return jsonify(statistics), 200
+
+        except Exception as e:
+            print(str(e))
+            return jsonify({"error": "Internal server error"}), 500
+
     @app.route("/users/signup", methods=["POST"])
     def sign_up():
         """
@@ -508,11 +579,11 @@ with open("application.yml") as f:
     password = info["password"]
     app.config["MONGODB_SETTINGS"] = {
         "db": "appTracker",
-        "localhost": os.getenv("db_username"),
+        "host": os.getenv("db_username"),
+        #"host": "localhost",
     }
 db = MongoEngine()
 db.init_app(app)
-
 
 class Users(db.Document):
     """
@@ -522,11 +593,16 @@ class Users(db.Document):
     id = db.IntField(primary_key=True)
     fullName = db.StringField()
     username = db.StringField()
-    email    = db.StringField()
+    email = db.StringField()
     password = db.StringField()
     authTokens = db.ListField()
     applications = db.ListField()
     resume = db.FileField()
+    education = db.ListField()
+    work_experience = db.ListField()
+    achievements = db.StringField()
+    skills = db.StringField()
+    target_details = db.DictField()
 
     def to_json(self):
         """
@@ -534,8 +610,17 @@ class Users(db.Document):
 
         :return: JSON object
         """
-        return {"id": self.id, "fullName": self.fullName, "username": self.username, "email": self.email}
-
+        return {
+            "id": self.id,
+            "fullName": self.fullName,
+            "username": self.username,
+            "email": self.email,
+            "education": self.education,
+            "work_experience": self.work_experience,
+            "achievements": self.achievements,
+            "skills": self.skills,
+            "target_details": self.target_details
+        }
 
 def get_new_user_id():
     """

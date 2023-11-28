@@ -27,7 +27,6 @@ export default class LoginPage extends Component{
             this.props.side()
         }).catch((error) => {
             console.log(error)
-            this.props.side()
             alert("Error while login ! Wrong username or password");
         })
          
@@ -43,6 +42,20 @@ export default class LoginPage extends Component{
         }
         //console.log(obj)
         signUp(obj).then((res) => {
+            let obj2 = {
+                username: uname,
+                password: pwd
+            }
+            getToken(obj2).then((res) => {
+                console.log(res)
+                if(res['error'])
+                    throw new Error("Wrong username or password");
+                storeToken(res)
+                this.props.signupSw();
+            }).catch((error) => {
+                console.log(error)
+                alert("Error while login ! Wrong username or password");
+            })
             alert("Sign up successfull! Proceed to Login");
             this.props.signupSw();
         }).catch((error) => {

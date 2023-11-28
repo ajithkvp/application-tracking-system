@@ -12,6 +12,7 @@ import CreateUserProfilePage from './login/CreateProfilePage';
 import UserProfilePage from './sidebar/UserProfilePage';
 import MoreInfoPage from './login/MoreInfoPage';
 import QuizPage from './login/quiz';
+import Summary from './application/summary/Summary';
 
 export default class App extends React.Component {
   constructor(props){
@@ -25,7 +26,9 @@ export default class App extends React.Component {
       'UserProfileCreatePage': <CreateUserProfilePage/>,
       'UserProfilePage': <UserProfilePage/>,
       'MoreInfoPage': <MoreInfoPage/>,
-      'QuizPage': <QuizPage/>
+      'QuizPage': <QuizPage/>,
+      'SummaryPage': <Summary/>
+
     }
     this.state ={
       currentPage: <CreateUserProfilePage/>,
@@ -33,7 +36,7 @@ export default class App extends React.Component {
       sidebar: false,
       display: "My applications",
       currPageName : "LoginPage",
-      finalProfile: {}
+      finalProfile: {"quiz":{"level":"Full-time","areaOfInterest":"Software","preferredLocations":["Raleigh","Chicago"]},"profileDetails":{"education":[{"collegeName":"NCSU","degree":"MS","major":"CS","gpa":"3.8"},{"collegeName":"SJCE","degree":"BE","major":"ECE","gpa":"3.7"}],"workExperience":[{"Company":"","Position":"","collegeName":"Moto","degree":"SWE"},{"Company":"","Position":"","collegeName":"Moto","degree":"Intern"}],"skills":"Python, Javascript","achievements":"Dimo application"},"targetDetails":{"targetTitle":"Senior SWE","targetDate":"09/09/2024","targetSalaryRange":"$120,00,000-$150,00,000","weeklyTarget":"35"}}
     }
     this.sidebarHandler = this.sidebarHandler.bind(this);
   };
@@ -91,7 +94,7 @@ export default class App extends React.Component {
     })
   }
 
-  switchtoProfilePage=(targetJSON)=>{
+  switchtoProfilePage= async (targetJSON)=>{
     let newJson = this.state.finalProfile
     newJson["targetDetails"] = targetJSON
     this.setState({
@@ -100,9 +103,59 @@ export default class App extends React.Component {
       finalProfile: newJson
   })
   console.log(JSON.stringify(newJson))
+  
+  try {
+    const response = await fetch('http://localhost:5000/users/profile', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
+        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        'Access-Control-Allow-Credentials': 'true',
+        'Content-Type': 'application/json'
+      },
+      body: newJson,
+    });
+
+    if (response.ok && response.headers.get('Content-Type') === 'application/json') {
+     console.log("success")
+
+    } else {
+      console.error('Failed to submit form:', response.status, response.statusText);
+    }
+  } catch (error) {
+    console.error('Error submitting form:', error.message);
+  }
   }
 
-  switchtoLogin=()=>{
+  switchtoLogin= async (targetJSON)=>{
+    let newJson = this.state.finalProfile
+    newJson["targetDetails"] = targetJSON
+    this.setState({
+      finalProfile: newJson
+  })
+  console.log(JSON.stringify(newJson))
+  
+  try {
+    const response = await fetch('http://localhost:5000/users/profile', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
+        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        'Access-Control-Allow-Credentials': 'true',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newJson),
+    });
+
+    if (response.ok && response.headers.get('Content-Type') === 'application/json') {
+     console.log("success")
+
+    } else {
+      console.error('Failed to submit form:', response.status, response.statusText);
+    }
+  } catch (error) {
+    console.error('Error submitting form:', error.message);
+  }
     this.setState({
       currPageName: "LoginPage",
       display: "My applications"
@@ -156,10 +209,7 @@ export default class App extends React.Component {
             <CreateUserProfilePage side={this.switchToMoreInfo}/>
           </div>
           <div style={{display: this.state.currPageName === 'MoreInfoPage'? "block" : "none"}}>
-            <MoreInfoPage side={this.switchtoProfilePage}/>
-          </div>
-          <div style={{display: this.state.currPageName === 'UserProfilePage'? "block" : "none"}}>
-            <UserProfilePage side={this.switchtoLogin}/>
+            <MoreInfoPage side={this.switchtoLogin}/>
           </div>
           
         </div>
@@ -170,4 +220,3 @@ export default class App extends React.Component {
     return app;
   }
 }
-
