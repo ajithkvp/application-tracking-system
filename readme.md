@@ -6,7 +6,7 @@ https://docs.google.com/spreadsheets/d/1N73mjdmcH7r2QEr4hIOPnVp8lbqBb6nZylECoW9P
 ##     For the video of proj3 - click the link below
 
 _________________________________________________________________________________________
-https://user-images.githubusercontent.com/89501363/144725439-5d9191f8-df13-4814-aa15-99cd752ab0cc.mp4
+
 
 [![GitHub license](https://img.shields.io/github/license/kingan1/application-tracking-system)](https://github.com/kingan1/application-tracking-system/blob/main/LICENSE)
 [![DOI](https://zenodo.org/badge/705451434.svg)](https://zenodo.org/doi/10.5281/zenodo.10023570)
@@ -16,9 +16,9 @@ https://user-images.githubusercontent.com/89501363/144725439-5d9191f8-df13-4814-
 ![GitHub top language](https://img.shields.io/github/languages/top/kingan1/application-tracking-system)
 
 [![Build and Deploy Frontend](https://github.com/kingan1/application-tracking-system/actions/workflows/frontend_CI_CD.yml/badge.svg)](https://github.com/kingan1/application-tracking-system/actions/workflows/frontend_CI_CD.yml)
-[![Super Linter](https://github.com/kingan1/application-tracking-system/actions/workflows/super-linter.yml/badge.svg)](https://github.com/kingan1/application-tracking-system/actions/workflows/super-linter.yml)
 
-#      J-Tracker 2.0 - Your Job Tracking Assistant
+
+#      J-Tracker 2.0 (Modified) - Your Job Tracking Assistant
 
 https://github.com/sachindoddaguni/application-tracking-system/assets/28365724/05c9b3a1-2487-4249-b160-7eeb24a1ec81
 
@@ -64,41 +64,21 @@ Our application keeps track of the jobs you've added to your wish list. It also 
 
 ## Samples:
 
+### Improvements done for Proj3 are as shown below - 
+
 ### Login Page / Signup Page
 
 The introductory visual interface displayed from which a user is able to register and log into the application.
 
-<p align="center"><img width="700" src="./resources/login.png"></p>
+<p align="center"><img width="700" src="./resources/updated_images/WhatsApp Image 2023-11-27 at 10.10.11 PM.jpeg"></p>
 
 
 ### HomeScreen
 
 The introductory visual interface displayed from which a user is able to access different cards - Waitlisted applications, Waiting for Refereals, Applied Jobs, Application Status.The user can also add cards through this screen.
 
-<p align="center"><img width="700" src="./resources/home_screen.png"></p>
+<p align="center"><img width="700" src="./resources/updated_images/appPage.jpeg"></p>
 
-
-### SearchPage
-
-The interface through which a user is able to search for specific jobs and add them to Waitlisted Applications.
-
-1. Navigate to Job search page, search for particular Job.
-2. Click on Add button. Fill in the Details.
-3. Click on Create buttop.
-4. The application will then be saved as per the selected category.
-
-<p align="center"><img width="700" src="./resources/search.png"></p>
-<p align="center"><img width="700" src="./resources/newjobdetails1.PNG"></p>
-
-
-### SearchPage with Salary filter
-
-The interface through which a user is able to search for specific jobs based on the salary range selected.
-
-1. Navigate to Job search page, search for particular Job and select the salary range from the dropdown.
-2. Click on Search button.
-
-<p align="center"><img width="700" src="./resources/salaryfilter1.png"></p>
 
 ### ResumePage
 
@@ -106,7 +86,7 @@ The interface through which a user is able to search for specific jobs based on 
 2. Upload any resume file with .PDF extension by selecting the file from local storage. Click Upload.
 3. Click on download button to Download the uploaded file.
 
-<p align="center"><img width="700" src="./resources/resume.png"></p>
+<p align="center"><img width="700" src="./resources/updated_images/ResumeBuilder.png"></p>
 
 
 ## Improvements for proj3:
@@ -114,6 +94,8 @@ The interface through which a user is able to search for specific jobs based on 
 ### Personalized CV in seconds - check the Cover Letter Generator!
 
 Users now have the ability to effortlessly craft a striking and polished cover letter. The Automatic Cover Letter Generator streamlines the process through an intuitive form for inputting essential information. The cover letter is produced as a Word document that can be edited, providing complete customization to align with your preferences and personal style.
+
+<p align="center"><img width="700" src="./resources/updated_images/CoverLetterGenerator.png"></p>
 
 Key Features:
 - **Easy Data Input**: Swiftly input essential details such as your personal information, company name, work experience, and more.
@@ -147,6 +129,8 @@ Set target dates for achieving specific career milestones, such as landing a new
 
 The job preference quiz is a user-friendly questionnaire that helps individuals specify their career preferences by addressing key factors such as desired job level, area of interest, and preferred locations. This will helpp generate better job recommednadations.
 
+<p align="center"><img width="700" src="./resources/updated_images/QuizPage.png"></p>
+
 ### 7. Profile details of Candidate
 
 The platform now saves the candidate's profile information, including education, work experience, skills, and achievements. This feature enables users to avoid the repetitive task of reentering the same details repeatedly.
@@ -155,6 +139,8 @@ The platform now saves the candidate's profile information, including education,
 
 We have enhanced the visual appeal of the website pages by applying CSS, resulting in an improved aesthetic.
 
+
+
 #### How It Works 
 - J-Tracker 2.0 will notify you through an email whenever a new application is created, updated and deleted.
 - Set your job application deadlines within the application.
@@ -162,7 +148,7 @@ We have enhanced the visual appeal of the website pages by applying CSS, resulti
 - Stay organized and never miss an important application deadline again.
 
 
-## Improvements
+## exisiting version - 
 
 ### Resume Builder
 
@@ -176,6 +162,27 @@ Key Features:
 
 ![image](https://github.com/sachindoddaguni/application-tracking-system/assets/28365724/9849abd8-6636-4a18-a63e-ee18b5f223bd)
 
+### SearchPage
+
+The interface through which a user is able to search for specific jobs and add them to Waitlisted Applications.
+
+1. Navigate to Job search page, search for particular Job.
+2. Click on Add button. Fill in the Details.
+3. Click on Create buttop.
+4. The application will then be saved as per the selected category.
+
+<p align="center"><img width="700" src="./resources/search.png"></p>
+<p align="center"><img width="700" src="./resources/newjobdetails1.PNG"></p>
+
+
+### SearchPage with Salary filter
+
+The interface through which a user is able to search for specific jobs based on the salary range selected.
+
+1. Navigate to Job search page, search for particular Job and select the salary range from the dropdown.
+2. Click on Search button.
+
+<p align="center"><img width="700" src="./resources/salaryfilter1.png"></p>
 
 
 ### Dockerization
