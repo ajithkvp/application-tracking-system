@@ -121,6 +121,7 @@ Key Features:
 - **Efficient Time Management**: Streamline the formatting and editing process through automation, saving you valuable time.
 
 ### A fresh and new tab to set and meet your targets!:
+
 ### 1. Application Pipeline Management
 
 Easily organize your job search with a visual pipeline that includes key stages such as Wishlist, Referral, Applied, and Rejected. Track the progress of each application and gain valuable insights into your overall job search status.
@@ -144,11 +145,15 @@ Set target dates for achieving specific career milestones, such as landing a new
   
 ### What's your cup of tea? - check here at Job Preference quiz
 
+The job preference quiz is a user-friendly questionnaire that helps individuals specify their career preferences by addressing key factors such as desired job level, area of interest, and preferred locations. This will helpp generate better job recommednadations.
+
 ### Profile details of Candidate
 
-### Apply before deadline - be notified!
+The platform now saves the candidate's profile information, including education, work experience, skills, and achievements. This feature enables users to avoid the repetitive task of reentering the same details repeatedly.
 
-We are excited to introduce a game-changing enhancement to J-Tracker 2.0 - the Email Notification feature! Keeping track of upcoming job application deadlines is now more effortless than ever.
+### Improved Website Design
+
+We have enhanced the visual appeal of the website pages by applying CSS, resulting in an improved aesthetic.
 
 #### How It Works 
 - J-Tracker 2.0 will notify you through an email whenever a new application is created, updated and deleted.
