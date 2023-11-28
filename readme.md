@@ -5,7 +5,7 @@ https://docs.google.com/spreadsheets/d/1N73mjdmcH7r2QEr4hIOPnVp8lbqBb6nZylECoW9P
 
 ##     For the video of proj3 - click the link below
 
-____________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________
 https://user-images.githubusercontent.com/89501363/144725439-5d9191f8-df13-4814-aa15-99cd752ab0cc.mp4
 
 [![GitHub license](https://img.shields.io/github/license/kingan1/application-tracking-system)](https://github.com/kingan1/application-tracking-system/blob/main/LICENSE)
