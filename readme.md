@@ -1,4 +1,8 @@
 #      J-Tracker 2.0 - Modified version for Proj3
+
+<p align="center"><img width="900" src="./resources/updated_images/JOB%20TRACKER%202.0.png"></p>
+
+
 ##     For the Score card of proj3 - click the link below
 
 https://docs.google.com/spreadsheets/d/1N73mjdmcH7r2QEr4hIOPnVp8lbqBb6nZylECoW9Pq6g/edit?usp=sharing
@@ -33,36 +37,28 @@ Our application keeps track of the jobs you've added to your wish list. It also 
 
 
 
-## Basic Design:
-![Basic Design](https://github.com/prithvish-doshi-17/application-tracking-system/blob/main/resources/Overall%20Design.PNG)
-
-## Samples:
+## Check out the improvised verision of Job Tracker:
 
 ## Improvements done for Proj3 are as shown below - 
 
-### Login Page / Signup Page - with extra styling
+### 1. What's your cup of tea? - The interactive Personal Preference Details Fetcher - 
 
-Styling of the login interface to be displayed from which a user is able to register and log into the application.
+Let us know about your preferences and we'll have your back in recommending the best for you!! The job preference quiz is a user-friendly questionnaire that helps individuals specify their career preferences by addressing key factors such as desired job level, area of interest, and preferred locations. This will helpp generate better job recommednadations.
 
-<p align="center"><img width="700" src="./resources/updated_images/WhatsApp Image 2023-11-27 at 10.10.11 PM.jpeg"></p>
-
-
-### HomeScreen
-
-Home screen (enhanced styling) from which a user is able to access different cards - Waitlisted applications, Waiting for Refereals, Applied Jobs, Application Status.The user can also add cards through this screen.
-
-<p align="center"><img width="700" src="./resources/updated_images/appPage.jpeg"></p>
+Fetches the below details -
+1. Job Prefernce Quiz
+2. Educational background and work experience
+3. Target specifications from candidates
 
 
-### ResumePage
+<p align="center"><img width="700" src="./resources/updated_images/QUIZ.png"></p>
 
-1. Navigate to resume Section
-2. Upload any resume file with .PDF extension by selecting the file from local storage. Click Upload.
-3. Click on download button to Download the uploaded file.
+<p align="center"><img width="700" src="./resources/updated_images/DETAILS.png"></p>
 
-<p align="center"><img width="700" src="./resources/updated_images/ResumeBuilder.png"></p>
+<p align="center"><img width="700" src="./resources/updated_images/TARGET.png"></p>
 
-### Personalized CV in seconds - check the Cover Letter Generator!
+
+### 2. Personalized CV in seconds - check the Cover Letter Generator!
 
 Users now have the ability to effortlessly craft a striking and polished cover letter. The Automatic Cover Letter Generator streamlines the process through an intuitive form for inputting essential information. The cover letter is produced as a Word document that can be edited, providing complete customization to align with your preferences and personal style.
 
@@ -73,89 +69,66 @@ Key Features:
 - **Personalization**: Customize your resume according to your specific preferences.
 - **Efficient Time Management**: Streamline the formatting and editing process through automation, saving you valuable time.
 
-### A fresh and new tab to set and meet your targets!:
+### 3. A fresh and new tab to set and meet your targets!:
 
-### 1. Application Pipeline Management
+<p align="center"><img width="700" src="./resources/updated_images/summary.png"></p>
+
+### What's in it for you?..
+
+#### 1. Application Pipeline Management
 
 Easily organize your job search with a visual pipeline that includes key stages such as Wishlist, Referral, Applied, and Rejected. Track the progress of each application and gain valuable insights into your overall job search status.
 
-### 2. Weekly Target Setting
+#### 2. Weekly Target Setting
 
 Set achievable weekly goals for job applications to stay on track with your job search. The application helps you define and meet your weekly targets, ensuring a consistent and proactive approach to securing your next role.
 
-### 3. Target Title and Salary Range Setting
+#### 3. Target Title and Salary Range Setting
 
 Define your career goals clearly by specifying your target job title and desired salary range. The application keeps this information at the forefront, helping you tailor your job search and stay focused on roles that align with your aspirations.
 
-### 4. Application Submission Analytics
+#### 4. Application Submission Analytics
 
 Gain insights into your application history with analytics that highlight the percentage of applications submitted versus your target. Visualize your progress over time and make data-driven decisions to improve your application strategy.
 
-### 5. Deadline Tracking
+#### 5. Deadline Tracking
 
 Set target dates for achieving specific career milestones, such as landing a new job by a certain date. The application provides reminders and notifications to keep you on schedule and motivated to meet your goals.
 
-  
-### 6. What's your cup of tea? - check here at Job Preference quiz
-
-The job preference quiz is a user-friendly questionnaire that helps individuals specify their career preferences by addressing key factors such as desired job level, area of interest, and preferred locations. This will helpp generate better job recommednadations.
-
-<p align="center"><img width="700" src="./resources/updated_images/QuizPage.png"></p>
-
-### 7. Profile details of Candidate
-
-The platform now saves the candidate's profile information, including education, work experience, skills, and achievements. This feature enables users to avoid the repetitive task of reentering the same details repeatedly.
 
 
-
-### 8. Improved Website Design
-
+## Improved Website Design
+### An aesthetic look! 
 We have enhanced the visual appeal of the website pages by applying CSS, resulting in an improved aesthetic.
 
+<div align="center">
+  <img width="250" src="./resources/updated_images/QUIZ.png">
+  <img width="250" src="./resources/updated_images/DETAILS.png">
+  <img width="250" src="./resources/updated_images/TARGET.png">
+</div>
 
 
-#### How It Works 
-- J-Tracker 2.0 will notify you through an email whenever a new application is created, updated and deleted.
-- Set your job application deadlines within the application.
-- J-Tracker 2.0 will automatically send you email notifications as your application deadlines approach.
-- Stay organized and never miss an important application deadline again.
+### Login Page / Signup Page (with extra styling)
+
+Styling of the login interface to be displayed from which a user is able to register and log into the application.
+
+<p align="center"><img width="700" src="./resources/updated_images/WhatsApp Image 2023-11-27 at 10.10.11 PM.jpeg"></p>
 
 
-## exisiting version - 
+### HomeScreen (with extra styling)
 
-### Resume Builder
+Home screen (enhanced styling) from which a user is able to access different cards - Waitlisted applications, Waiting for Refereals, Applied Jobs, Application Status.The user can also add cards through this screen.
 
-Introducing a powerful new feature! Users can now create a stunning and ATS-friendly resume with minimal effort. The Automatic Resume Builder simplifies the process by providing a user-friendly form for basic information input. The best part? Your resume is generated as an editable Word document, offering full customization to suit your preferences and style.
-
-Key Features:
-- **Effortless Data Entry**: Quickly provide your basic information, education, skills, and more.
-- **ATS-Friendly**: Ensure compatibility with modern hiring systems.
-- **Customization**: Tailor your resume to your preferences.
-- **Time-Saving**: Automate the formatting and editing process.
-
-![image](https://github.com/sachindoddaguni/application-tracking-system/assets/28365724/9849abd8-6636-4a18-a63e-ee18b5f223bd)
-
-### SearchPage
-
-The interface through which a user is able to search for specific jobs and add them to Waitlisted Applications.
-
-1. Navigate to Job search page, search for particular Job.
-2. Click on Add button. Fill in the Details.
-3. Click on Create buttop.
-4. The application will then be saved as per the selected category.
-
-<p align="center"><img width="700" src="./resources/search.png"></p>
-<p align="center"><img width="700" src="./resources/newjobdetails1.PNG"></p>
+<p align="center"><img width="700" src="./resources/updated_images/appHome.png"></p>
 
 
-### SearchPage with Salary filter
+### ResumePage
 
-The interface through which a user is able to search for specific jobs based on the salary range selected.
+Build your resume in seconds!!
 
-1. Navigate to Job search page, search for particular Job and select the salary range from the dropdown.
-2. Click on Search button.
+<p align="center"><img width="700" src="./resources/updated_images/RESUME.png"></p>
 
-<p align="center"><img width="700" src="./resources/salaryfilter1.png"></p>
+_______________________________________________________________
 
 
 ### Dockerization
