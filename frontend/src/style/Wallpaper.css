@@ -1,0 +1,9 @@
+/* Wallpaper.css */
+.wallpaper-container {
+    background-image: url('/Users/reshmaraj/Documents/application-tracking-system/frontend/src/style/wp1.jpg');  
+    background-size: cover;  
+    background-position: center;  
+    height: 100vh;  
+    /* Add any other styles you need */
+  }
+  

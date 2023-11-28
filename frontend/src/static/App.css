@@ -32,6 +32,10 @@
   overflow: auto;
   min-height: 100vh;
   background-color: #ebf0f7;
+  background-image: url("../style/wp1.jpg");
+  background-size: cover;  
+  background-position: center;  
+  height: 100vh;
 }
 .content {
   padding-right: 7.5rem;
@@ -68,6 +72,10 @@
 .card-body {
   flex: 1 1 auto;
   background-color: #fff;
+  /* background-image: url("../style/wp1.jpg");
+  background-size: cover;  
+  background-position: center;  
+  height: 100vh; */
   padding: 1rem;
   border-radius: 8px;
   box-shadow: rgb(99 99 99 / 10%) 0px 2px 8px 0px;
@@ -138,6 +146,10 @@ input:focus-visible {
   display: flex;
   flex-direction: row;
   background-color: #ebf0f7;
+  background-image: url("../style/wp1.jpg");
+  background-size: cover;  
+  background-position: center;  
+  height: 100vh;
 }
 .main {
   width: 95%;

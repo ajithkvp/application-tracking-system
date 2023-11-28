@@ -13,6 +13,7 @@ import UserProfilePage from './sidebar/UserProfilePage';
 import MoreInfoPage from './login/MoreInfoPage';
 import QuizPage from './login/quiz';
 import Summary from './application/summary/Summary';
+import CoverLetterGenerator from './login/CoverLetter';
 
 export default class App extends React.Component {
   constructor(props){
@@ -27,8 +28,8 @@ export default class App extends React.Component {
       'UserProfilePage': <UserProfilePage/>,
       'MoreInfoPage': <MoreInfoPage/>,
       'QuizPage': <QuizPage/>,
-      'SummaryPage': <Summary/>
-
+      'SummaryPage': <Summary/>,
+      'CoverLetterGenerator': <CoverLetterGenerator/>
     }
     this.state ={
       currentPage: <CreateUserProfilePage/>,
@@ -97,15 +98,15 @@ export default class App extends React.Component {
   switchtoProfilePage= async (targetJSON)=>{
     let newJson = this.state.finalProfile
     newJson["targetDetails"] = targetJSON
-    this.setState({
+    /*this.setState({
       currPageName: "UserProfilePage",
       display: "Review the data entered",
       finalProfile: newJson
-  })
+  })*/
   console.log(JSON.stringify(newJson))
   
   try {
-    const response = await fetch('http://localhost:5000/resumebuilder', {
+    const response = await fetch('http://localhost:5000/users/profile', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer ' + localStorage.getItem('token'),
@@ -113,10 +114,10 @@ export default class App extends React.Component {
         'Access-Control-Allow-Credentials': 'true',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(newJson),
+      body: newJson,
     });
 
-    if (response.ok && response.headers.get('Content-Type') === 'application/msword') {
+    if (response.ok && response.headers.get('Content-Type') === 'application/json') {
      console.log("success")
 
     } else {
@@ -144,7 +145,9 @@ export default class App extends React.Component {
           <div className="content">
             <div className="">
 
-              <h1 className="text-center">My applications</h1>
+            <h1 style={{ textAlign: 'center', fontFamily: 'Palatino, serif', color: 'white', fontSize: 80 }}>
+      My applications
+    </h1>
               {/* <span className="btn-icon ">
                 <button className="btn btn-danger btn-icon"><i className="fas fa-plus"></i>&nbsp;New</button>
               </span> */}
@@ -195,4 +198,3 @@ export default class App extends React.Component {
     return app;
   }
 }
-

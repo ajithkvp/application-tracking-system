@@ -167,7 +167,7 @@ export default class CreateUserProfilePage extends Component {
                         /></div>
                     </label>
                 </div>
-                <div style={{ marginTop: "1rem" }}>
+                <div style={{ marginTop: "1rem", color:'white' }}>
                     <label>
                         Achievements:
                         <div  style={{ marginleft: "1rem", marginRight: "1rem" }}>

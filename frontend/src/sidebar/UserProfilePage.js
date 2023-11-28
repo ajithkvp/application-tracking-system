@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery'
 
 class UserProfilePage extends Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class UserProfilePage extends Component {
 
   renderEducation() {
     return this.state.education.map((edu, index) => (
-      <div key={index}>
+      <div key={index} style ={{color: 'white'}}>
         <h4>Education {index + 1}</h4>
         <p>College Name: {edu.collegeName}</p>
         <p>Degree: {edu.degree}</p>
@@ -68,36 +69,37 @@ class UserProfilePage extends Component {
 
   render() {
     return (
-      <div>
-        <h1>User Profile</h1>
-
+      <div >
+        <h1 >User Profile</h1>
+    
         <div>
           <h3>Education</h3>
           {this.renderEducation()}
         </div>
-
+    
         <div>
           <h3>Work Experience</h3>
           {this.renderWorkExperience()}
         </div>
-
+    
         <div>
           <h3>Skills</h3>
           <p>{this.state.skills}</p>
         </div>
-
+    
         <div>
           <h3>Achievements</h3>
           <p>{this.state.achievements}</p>
         </div>
-        <div style={{ marginTop: "2rem", marginleft: "1rem", marginRight: "1rem", alignItems: 'center'}}>
-                <button type="button" onClick={this.handleSubmit}>
-                                    Login Page
-                                </button>
-                </div>
+    
+        <div style={{ marginTop: '2rem', marginLeft: '1rem', marginRight: '1rem', alignItems: 'center' }}>
+          <button type="button" onClick={this.handleSubmit}>
+            Login Page
+          </button>
+        </div>
       </div>
-      
     );
+    
   }
 }
 
