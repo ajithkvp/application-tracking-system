@@ -32,43 +32,13 @@ The process of applying for jobs and internships is not a cakewalk. Managing job
 Our application keeps track of the jobs you've added to your wish list. It also keeps track of the companies you've already applied to and keeps a list of any rejections. Rather than having the user browse each company's site for potential prospects, our application allows the applicant to search for them directly using basic keywords. Any prospective work offers can then be added to the applicant's wishlist.
 
 
-## Table of contents
-
-- [Basic Design](#basic-design)
-- [Demo](#demo)
-- [Improvements](#improvements)
-    + [Resume Builder](#resume-builder)
-    + [Dockerization](#dockerization)
-    + [Email Notification for Job Application Deadlines](#Email-Notification-for-Job-Application-Deadlines)
-- [Roadmap](#roadmap)
-- [Successful Usecases](#successful-usecases)
-- [Future Scope](#future-scope)
-- [Explanation](#explanation)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-    + [Requirements](#requirements)
-    + [Strongly Recommended](#strongly-recommended)
-- [Getting Started](#getting-started)
-    + [Boot](#boot)
-    + [Shutdown](#shutdown)
-- [Hosting the Database](#hosting-the-database)
-    + [Local MongoDB](#local-mongodb)
-    + [Hosted database with MongoDB Atlas](#hosted-database-with-mongodb-atlas)
-- [Troubleshooting](#troubleshooting)
-- [Project Funding](#project-funding)
-- [License](#license)
-- [How to Contribute](#how-to-contribute)
-- [Team Members](#team-members)
-- [Recommended citation](#recommended-citation)
-
-
 
 ## Basic Design:
 ![Basic Design](https://github.com/prithvish-doshi-17/application-tracking-system/blob/main/resources/Overall%20Design.PNG)
 
 ## Samples:
 
-### Improvements done for Proj3 are as shown below - 
+## Improvements done for Proj3 are as shown below - 
 
 ### Login Page / Signup Page - with extra styling
 
