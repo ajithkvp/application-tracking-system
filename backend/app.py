@@ -200,7 +200,7 @@ def create_app():
                 "total_applications": total_applications,
                 "status_counts": status_counts,
                 "weekly_target": user["target_details"].get("weeklyTarget") if user["target_details"].get("weeklyTarget") else 0,
-                "weekly_applied": status_counts["2"]+status_counts["3"],
+                "weekly_applied": status_counts["3"]+status_counts["4"],
                 "target_title": user["target_details"].get("targetTitle"),
                 "target_date": user["target_details"].get("targetDate"),
                 "target_salary": user["target_details"].get("targetSalaryRange")
